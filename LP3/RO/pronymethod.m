@@ -17,9 +17,7 @@ function [b,a] = pronymethod(ord, hd)
     %a=a'
     % b coefficients are computed
     for n=0:ord
-    %first equations from Pade method
-    b(1+n)=hd(n+1) + sum(a(1:n)' .*hd(n:-1:1)); %htis is a sub-vector of hd
-% that includes the elements from n to 1, traversing the hd vector in reverse order."
+    b(1+n)=hd(n+1) + sum(a(1:n)' .*hd(n:-1:1)); 
     end
     b=b';
 end
